@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cairn — Delete Your Account &amp; Data</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#F5F3EC; --panel:#FBFAF6; --ink:#1B1D26; --muted:#5F6058;
+    --line:#E3DFD3; --gold:#B4841F; --accent:#3B4670;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0F111A; --panel:#161927; --ink:#ECEAE0; --muted:#9A9C93;
+      --line:#262A3A; --gold:#E6B860; --accent:#8FA0D8;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:Inter,system-ui,-apple-system,sans-serif;line-height:1.65;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:56px 22px 96px}
+  header{border-bottom:1px solid var(--line);padding-bottom:26px}
+  .brand{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+  .brand span{font-family:Fraunces,serif;font-size:1.5rem;letter-spacing:.03em}
+  h1{font-family:Fraunces,serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.3rem);
+    margin:0 0 8px;letter-spacing:-.01em}
+  .meta{color:var(--muted);font-size:.9rem;margin:0}
+  h2{font-family:Fraunces,serif;font-weight:500;font-size:1.2rem;margin:40px 0 10px}
+  p,li{font-size:1rem}
+  a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+  strong{color:var(--ink)}
+  ol,ul{padding-left:22px}
+  li{margin:8px 0}
+  .callout{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;margin:22px 0}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.94rem}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-weight:600;color:var(--muted);font-size:.82rem;letter-spacing:.03em;text-transform:uppercase}
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);
+    color:var(--muted);font-size:.88rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="512" height="512" rx="118" fill="#141626"/>
+        <ellipse cx="256" cy="372" rx="118" ry="44" transform="rotate(-5 256 372)" fill="#EDE9DE"/>
+        <ellipse cx="236" cy="284" rx="90" ry="40" transform="rotate(7 236 284)" fill="#DED9CC"/>
+        <ellipse cx="274" cy="206" rx="62" ry="34" transform="rotate(-8 274 206)" fill="#CFCABB"/>
+        <circle cx="252" cy="140" r="30" fill="#E9B95C"/>
+      </svg>
+      <span>Cairn</span>
+    </div>
+    <h1>Delete Your Account &amp; Data</h1>
+    <p class="meta">Last updated: 28 August 2026</p>
+  </header>
+
+  <div class="callout">
+    <strong>Cairn does not run its own account system.</strong> Your thoughts, photos and voice
+    notes are stored only on your device. The only "account" involved is the optional Google
+    sign-in used for Cairn+ cloud backup — and you are always in control of it.
+  </div>
+
+  <h2>Delete everything on your device</h2>
+  <ol>
+    <li>Open Cairn.</li>
+    <li>Go to <strong>More</strong>, and delete individual thoughts, or use <strong>Export a copy</strong> first if you want to keep a backup file.</li>
+    <li>To remove all local data at once, uninstall the Cairn app from your phone. This permanently deletes your thoughts, photos and voice notes stored on the device.</li>
+  </ol>
+
+  <h2>Disconnect your Google account (Cairn+ backup)</h2>
+  <ol>
+    <li>Open Cairn → <strong>More → Account</strong>.</li>
+    <li>Tap <strong>Sign out</strong>. This removes your account email, name and identifier from your device and stops future backups.</li>
+  </ol>
+
+  <h2>Delete your backup from Google Drive</h2>
+  <p>Cairn's cloud backup is saved to <strong>your own Google Drive</strong>, in a location only your account can access. To delete it:</p>
+  <ol>
+    <li>Open the <a href="https://drive.google.com">Google Drive</a> app or website, signed in with the same account.</li>
+    <li>Find the Cairn backup file (or the app-specific "Cairn" folder), and delete it.</li>
+    <li>Empty your Drive trash to remove it permanently.</li>
+  </ol>
+
+  <h2>What is deleted vs. retained</h2>
+  <table>
+    <tr><th>Data</th><th>Deleted by</th><th>Retention</th></tr>
+    <tr><td>Thoughts, photos, voice notes</td><td>Uninstalling the app</td><td>None — we never had a copy</td></tr>
+    <tr><td>Cloud backup file</td><td>Deleting it from your Google Drive</td><td>Stays until you delete it; only you can access it</td></tr>
+    <tr><td>Account email / name / ID stored locally</td><td>Signing out in the app</td><td>Removed from device immediately</td></tr>
+    <tr><td>Subscription/billing record</td><td>Managed by Google Play</td><td>Governed by Google's own retention policy</td></tr>
+  </table>
+  <p>We do not operate a server that stores your content, so there is nothing on our end to separately delete once you've completed the steps above.</p>
+
+  <h2>Need help?</h2>
+  <p>If you have any trouble, or want us to confirm anything about your data, email <a href="mailto:shrey30000official@gmail.com">shrey30000official@gmail.com</a>.</p>
+
+  <footer>
+    <p>See also our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
+  </footer>
+</div>
+</body>
+</html>
