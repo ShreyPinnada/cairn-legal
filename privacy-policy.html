@@ -66,7 +66,7 @@
       <span>Cairn</span>
     </div>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: 28 August 2026</p>
+    <p class="meta">Last updated: 3 September 2026</p>
   </header>
 
   <div class="tldr">
@@ -74,7 +74,7 @@
     <ul>
       <li>Your thoughts, photos and voice notes are stored <strong>on your phone</strong>. By default, nothing you write leaves your device.</li>
       <li>Cairn has <strong>no ads, no analytics, and no third-party trackers</strong>, and you don't need an account to use it.</li>
-      <li>The AI that finds connections between your thoughts runs <strong>entirely on your device</strong>.</li>
+      <li>On-device AI powers search and connections — <strong>your thoughts never leave your device for these features</strong>. Cairn+ adds cloud-powered topic tagging (via Google's AI) to surface richer connections; the text of thoughts sent for tagging is not retained by Google.</li>
       <li>Cloud backup is <strong>optional</strong> — it saves to <strong>your own Google Drive</strong>, and only if you turn it on.</li>
     </ul>
   </div>
@@ -100,8 +100,19 @@
     <li>We do <strong>not</strong> sell or share your personal information with anyone.</li>
   </ul>
 
-  <h2>3. Downloading the AI models</h2>
-  <p>To power on-device search and connections, Cairn downloads AI model files the first time they are needed. These files are hosted publicly on GitHub Releases (<code>github.com/ShreyPinnada/Recollect-models</code>). This is a one-way download <em>to</em> your phone — <strong>none of your thoughts or personal content is sent</strong> in the process. As with any web request, the host (GitHub, a service of Microsoft) may automatically log technical information such as your IP address; this is governed by GitHub's own privacy policy.</p>
+  <h2>3. AI — on-device and cloud</h2>
+  <h3>On-device models</h3>
+  <p>To power search and connections, Cairn downloads AI model files the first time they are needed. These files are hosted publicly on GitHub Releases (<code>github.com/ShreyPinnada/Recollect-models</code>). This is a one-way download <em>to</em> your phone — <strong>none of your thoughts or personal content is sent</strong> in the process. As with any web request, the host (GitHub, a service of Microsoft) may automatically log technical information such as your IP address; this is governed by GitHub's own privacy policy.</p>
+
+  <h3>Cairn+ cloud AI tagging</h3>
+  <p>Cairn+ subscribers receive an additional feature: cloud-powered topic tagging. When enabled, the <strong>text of individual thoughts</strong> is sent to <strong>Google's Vertex AI service</strong> to generate short topic tags (e.g. "travel", "ideas", "health"). These tags are returned to your device and stored locally — they are what powers the richer connections Cairn+ surfaces.</p>
+  <ul>
+    <li>Only the <strong>text content</strong> of a thought is sent — photos, voice recordings, and location data are never transmitted for tagging.</li>
+    <li>Google processes the text and returns tags. According to Google's API usage policies, request content is <strong>not used to train Google's models</strong> and is not retained beyond the time needed to generate a response.</li>
+    <li>We never see or store your thoughts on our own servers — the request goes from your device directly to Google's API.</li>
+    <li>A monthly token cap is enforced on your device, so the volume of text sent is bounded and visible to you in the Cairn+ section of the app.</li>
+  </ul>
+  <p>If you prefer to keep all your thought content on-device, you can contact us to discuss your options. We plan to add an in-app toggle for this in a future update.</p>
 
   <h2>4. Optional Google account and cloud backup</h2>
   <p>Cairn works fully without any sign-in. If you choose to enable <strong>cloud backup</strong> (a Cairn+ feature), you sign in with your Google account, and:</p>
