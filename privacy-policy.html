@@ -66,28 +66,29 @@
       <span>Cairn</span>
     </div>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: 3 September 2026</p>
+    <p class="meta">Last updated: 11 September 2026</p>
   </header>
 
   <div class="tldr">
     <h2>The short version</h2>
     <ul>
-      <li>Your thoughts, photos and voice notes are stored <strong>on your phone</strong>. By default, nothing you write leaves your device.</li>
+      <li>Your thoughts, photos and voice notes are stored <strong>on your device</strong>. Cairn has no server of its own, and we cannot see your thoughts.</li>
       <li>Cairn has <strong>no ads, no analytics, and no third-party trackers</strong>, and you don't need an account to use it.</li>
-      <li>On-device AI powers search and connections — <strong>your thoughts never leave your device for these features</strong>. Cairn+ adds cloud-powered topic tagging (via Google's AI) to surface richer connections; the text of thoughts sent for tagging is not retained by Google.</li>
-      <li>Cloud backup is <strong>optional</strong> — it saves to <strong>your own Google Drive</strong>, and only if you turn it on.</li>
+      <li>Search and connections run on <strong>on-device AI</strong>. If you subscribe to Cairn+, the <strong>text</strong> of your thoughts is also sent to Google's Gemini AI to label them with topics — never photos, audio or location.</li>
+      <li>Cloud backup is <strong>optional</strong>. It goes to <strong>your own Google Drive</strong> on Android or <strong>your own iCloud</strong> on iPhone, and only if you turn it on.</li>
     </ul>
   </div>
 
-  <p>This Privacy Policy explains how the Cairn mobile application ("Cairn", "the app", "we", "us") handles your information. By using Cairn, you agree to the practices described here. If you do not agree, please do not use the app.</p>
+  <p>This Privacy Policy explains how the Cairn app for Android, iPhone and iPad ("Cairn", "the app", "we", "us") handles your information. Where the two versions differ, this policy says so. By using Cairn, you agree to the practices described here. If you do not agree, please do not use the app.</p>
 
   <h2>1. Information stored on your device</h2>
-  <p>Cairn is built to be a private, on-device notebook. The following are created and stored <strong>locally on your phone</strong> and are not transmitted to us:</p>
+  <p>Cairn is built to be a private, on-device notebook. The following are created and stored <strong>locally on your device</strong> and are not transmitted to us:</p>
   <ul>
     <li><strong>Your thoughts</strong> — the text you write.</li>
-    <li><strong>Photos</strong> you attach or capture within the app.</li>
+    <li><strong>Photos</strong> you attach to a thought.</li>
     <li><strong>Voice notes</strong> you record.</li>
-    <li><strong>Derived data</strong> — mathematical representations ("embeddings") of your thoughts, and the connections between them, all computed on your device to power search and the wall.</li>
+    <li><strong>Places</strong> you choose to attach to a thought, including a location read from a photo you attach.</li>
+    <li><strong>Derived data</strong> — mathematical representations ("embeddings") of your thoughts, the connections between them, and any Cairn+ topic tags, used to power search and the wall.</li>
     <li><strong>Your settings and preferences.</strong></li>
   </ul>
   <p>We do not have a server that receives, stores, or reads this content. We cannot see your thoughts.</p>
@@ -97,66 +98,82 @@
     <li>We do <strong>not</strong> use advertising or advertising identifiers.</li>
     <li>We do <strong>not</strong> use analytics or crash-reporting SDKs, and we do not build a profile of you.</li>
     <li>We do <strong>not</strong> require you to create an account or provide your name, email, or phone number to use the app.</li>
-    <li>We do <strong>not</strong> sell or share your personal information with anyone.</li>
+    <li>We do <strong>not</strong> sell your personal information or share it for advertising.</li>
   </ul>
 
   <h2>3. AI — on-device and cloud</h2>
   <h3>On-device models</h3>
-  <p>To power search and connections, Cairn downloads AI model files the first time they are needed. These files are hosted publicly on GitHub Releases (<code>github.com/ShreyPinnada/Recollect-models</code>). This is a one-way download <em>to</em> your phone — <strong>none of your thoughts or personal content is sent</strong> in the process. As with any web request, the host (GitHub, a service of Microsoft) may automatically log technical information such as your IP address; this is governed by GitHub's own privacy policy.</p>
+  <p>To power search and connections, Cairn downloads AI model files the first time they are needed. These files are hosted publicly on GitHub Releases (<code>github.com/ShreyPinnada/Recollect-models</code>). This is a one-way download <em>to</em> your device — <strong>none of your thoughts or personal content is sent</strong> in the process. As with any web request, the host (GitHub, a service of Microsoft) may automatically log technical information such as your IP address; this is governed by GitHub's own privacy policy.</p>
 
-  <h3>Cairn+ cloud AI tagging</h3>
-  <p>Cairn+ subscribers receive an additional feature: cloud-powered topic tagging. When enabled, the <strong>text of individual thoughts</strong> is sent to <strong>Google's Vertex AI service</strong> to generate short topic tags (e.g. "travel", "ideas", "health"). These tags are returned to your device and stored locally — they are what powers the richer connections Cairn+ surfaces.</p>
+  <h3>Cairn+ cloud topic tagging</h3>
+  <p>If you subscribe to Cairn+, Cairn labels your thoughts with short topic, feeling and intent tags (for example "travel", "ideas", "health") so that related thoughts connect even when they are worded differently. To do this, the <strong>text of your thoughts</strong> is sent to <strong>Google's Gemini API</strong>, through <strong>Google's Firebase</strong> service. The tags come back to your device and are stored there.</p>
   <ul>
-    <li>Only the <strong>text content</strong> of a thought is sent — photos, voice recordings, and location data are never transmitted for tagging.</li>
-    <li>Google processes the text and returns tags. According to Google's API usage policies, request content is <strong>not used to train Google's models</strong> and is not retained beyond the time needed to generate a response.</li>
-    <li>We never see or store your thoughts on our own servers — the request goes from your device directly to Google's API.</li>
-    <li>A monthly token cap is enforced on your device, so the volume of text sent is bounded and visible to you in the Cairn+ section of the app.</li>
+    <li>Only the <strong>text</strong> of a thought is sent. Photos, voice recordings and location are never sent for tagging.</li>
+    <li>Tagging happens only while Cairn+ is active. If you do not subscribe, your thoughts are never sent.</li>
+    <li>The request goes through Google's Firebase and Gemini services, not through any server of ours. We never receive or store the text or the tags. Google handles this text under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Additional Terms of Service</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+    <li>To confirm a request really comes from Cairn, Firebase App Check asks your device's own integrity service — Play Integrity on Android, App Attest on iPhone — for a token. This token identifies a genuine copy of the app, not you.</li>
+    <li>Cairn enforces a monthly limit on your device, so the amount of text sent is bounded.</li>
   </ul>
-  <p>If you prefer to keep all your thought content on-device, you can contact us to discuss your options. We plan to add an in-app toggle for this in a future update.</p>
+  <p>If you want to keep every thought on your device, do not subscribe to Cairn+ or, if you have, contact us to discuss your options.</p>
 
-  <h2>4. Optional Google account and cloud backup</h2>
-  <p>Cairn works fully without any sign-in. If you choose to enable <strong>cloud backup</strong> (a Cairn+ feature), you sign in with your Google account, and:</p>
+  <h2>4. Voice, places and map links</h2>
   <ul>
-    <li>Backups are saved to <strong>your own Google Drive</strong>. We do not receive a copy and cannot access your Drive.</li>
+    <li><strong>Voice-to-text.</strong> On iPhone and iPad, speech is turned into text <strong>on your device</strong>. On Android, Cairn uses your phone's speech recognition service, which, depending on your device and its settings, may process audio on Google's servers.</li>
+    <li><strong>Places.</strong> If you type a place name or share a map link to attach a place, Cairn asks your device's built-in map service — Google on Android, Apple on iPhone and iPad — to find its location. Only the place name or link is sent, never your thoughts. To read a shortened map link, Cairn also opens that link on the map provider's own site.</li>
+  </ul>
+
+  <h2>5. Optional cloud backup</h2>
+  <p>Cairn works fully without any sign-in. Cloud backup is a Cairn+ feature and is off until you turn it on. It saves one encrypted copy of your thoughts, and it restores by merging, so newer thoughts on your device are never overwritten.</p>
+  <h3>On Android — your Google Drive</h3>
+  <ul>
+    <li>You sign in with your Google account, and backups are saved to a private area of <strong>your own Google Drive</strong>. We do not receive a copy and cannot access your Drive.</li>
     <li>We store, on your device only, the minimum needed to show "signed in as …" and to know a backup destination exists (your account email, display name, and account identifier). We do not store long-lived access tokens; those are issued fresh by Google each time.</li>
     <li>You can sign out at any time from within the app, which removes this information from your device.</li>
   </ul>
-  <p>Your use of Google Drive is subject to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+  <h3>On iPhone and iPad — your iCloud</h3>
+  <ul>
+    <li>There is nothing to sign in to. The backup is saved to a private area of <strong>your own iCloud</strong>, under the Apple Account already on your device, and counts toward your iCloud storage. We do not receive a copy and cannot access your iCloud.</li>
+    <li>The backup is encrypted with a random key that is kept in your iCloud Keychain, so your other Apple devices can restore it. We never see this key.</li>
+    <li>You can delete the backup at any time from within the app.</li>
+  </ul>
+  <p>Your use of Google Drive is subject to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>, and your use of iCloud to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. You can also export an encrypted backup file yourself on either platform.</p>
 
-  <h2>5. Subscriptions and payments</h2>
-  <p>Cairn+ subscriptions are sold and processed entirely by <strong>Google Play</strong>. We never see or receive your card number, billing address, or other payment details. Google shares with us only whether your subscription is active, so the app can unlock Cairn+ features. Payment handling is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and the Google Play Terms of Service.</p>
+  <h2>6. Subscriptions and payments</h2>
+  <p>Cairn+ is sold and processed entirely by <strong>Google Play</strong> on Android and the <strong>Apple App Store</strong> on iPhone and iPad. We never see or receive your card number, billing address, or other payment details. The store tells the app only whether your subscription is active, so it can unlock Cairn+ features. Payments are governed by the store's own terms and privacy policy.</p>
 
-  <h2>6. Device permissions</h2>
+  <h2>7. Device permissions</h2>
   <div class="tablewrap">
   <table>
     <tr><th>Permission</th><th>Why Cairn asks</th></tr>
-    <tr><td>Camera</td><td>Only when you choose to take a photo to attach to a thought.</td></tr>
+    <tr><td>Camera (Android)</td><td>Only when you choose to take a photo to attach to a thought. On iPhone and iPad, Cairn uses the system photo picker and never asks for camera or photo-library access.</td></tr>
     <tr><td>Microphone</td><td>Only when you choose to record a voice note.</td></tr>
-    <tr><td>Notifications</td><td>To send optional reminders and the morning surface, if you enable them.</td></tr>
+    <tr><td>Speech recognition (iPhone and iPad)</td><td>To turn a voice note into text on your device.</td></tr>
+    <tr><td>Location</td><td>Only when you tap the pin to attach where you are to a thought.</td></tr>
+    <tr><td>Notifications</td><td>To send optional reminders and the evening nudge, if you enable them.</td></tr>
   </table>
   </div>
-  <p>Photos and audio you create stay on your device. You can revoke any permission at any time in your phone's system settings.</p>
+  <p>Photos, audio and places you create stay on your device. You can revoke any permission at any time in your device's system settings.</p>
 
-  <h2>7. Data retention and deletion</h2>
-  <p>Because your content lives on your device, <strong>you are in control of it</strong>. Deleting a thought removes it from the app. Uninstalling Cairn removes the app's local data from your device. If you enabled cloud backup, any copy in your Google Drive is managed by you and can be deleted from your Drive.</p>
+  <h2>8. Data retention and deletion</h2>
+  <p>Because your content lives on your device, <strong>you are in control of it</strong>. Deleting a thought removes it from the app. Uninstalling Cairn removes the app's local data from your device. If you enabled cloud backup, the copy in your Google Drive or iCloud is yours and can be deleted from within the app or from your account. See <a href="delete-account.html">Delete your data</a> for step-by-step instructions.</p>
 
-  <h2>8. Children's privacy</h2>
+  <h2>9. Children's privacy</h2>
   <p>Cairn is not directed to children under 13 (or the minimum age of digital consent in your country), and we do not knowingly collect personal information from them.</p>
 
-  <h2>9. Your rights</h2>
+  <h2>10. Your rights</h2>
   <p>Depending on where you live (for example under the GDPR or CCPA), you may have rights to access, correct, or delete your personal data. Because Cairn stores your content on your own device and we do not hold it on a server, you can exercise these rights directly within the app and your device. If you have questions, contact us below.</p>
 
-  <h2>10. Security</h2>
-  <p>Your content is stored within the app's private storage on your device, protected by your device's own security. Cairn also offers an optional app lock (PIN or biometric). No method of storage or transmission is perfectly secure, but because your data stays on your device by default, its safety is tied primarily to your device's security.</p>
+  <h2>11. Security</h2>
+  <p>Your content is stored within the app's private storage on your device, protected by your device's own security. Cairn also offers an optional app lock — a PIN or biometrics on Android, and Face ID, Touch ID or your passcode on iPhone and iPad. Backups are encrypted before they leave your device. No method of storage or transmission is perfectly secure, but because your data stays on your device by default, its safety is tied primarily to your device's security.</p>
 
-  <h2>11. Changes to this policy</h2>
+  <h2>12. Changes to this policy</h2>
   <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date above and, where appropriate, notify you in the app. Continued use of Cairn after changes take effect constitutes acceptance of the updated policy.</p>
 
-  <h2>12. Contact</h2>
+  <h2>13. Contact</h2>
   <p>If you have any questions about this Privacy Policy or your data, contact us at <a href="mailto:shrey30000official@gmail.com">shrey30000official@gmail.com</a>.</p>
 
   <footer>
-    <p>Cairn — a quiet place for your thoughts. This policy applies to the Cairn Android application distributed via Google Play.</p>
+    <p>Cairn — a quiet place for your thoughts. This policy applies to the Cairn app for Android, distributed via Google Play, and for iPhone and iPad, distributed via the App Store.</p>
   </footer>
 </div>
 </body>
