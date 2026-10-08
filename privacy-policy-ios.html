@@ -66,23 +66,25 @@
       <span>Cairn</span>
     </div>
     <h1>Privacy Policy — iPhone &amp; iPad</h1>
-    <p class="meta">Last updated: 25 September 2026</p>
+    <p class="meta">Last updated: 8 October 2026</p>
   </header>
   <p>Cairn is a place to write down your thoughts. This policy explains what happens to them.</p>
-  <p>The short version: <strong>your thoughts stay on your iPhone.</strong> Cairn has no account, no server and no analytics. Nobody — including the developer — can read what you write.</p>
+  <p>The short version: <strong>your thoughts stay on your iPhone.</strong> Cairn has no account and no server of its own. It sends anonymous crash reports and app-usage counts to help fix bugs — never anything you write. Nobody — including the developer — can read what you write.</p>
   <h2>What Cairn collects about you</h2>
-  <p><strong>Nothing, and the developer receives nothing.</strong></p>
-  <p>There is no sign-up, no profile and no user ID. Cairn does not collect, transmit or store your thoughts, your searches, your questions, your location, your voice or your photos on any server. There is no analytics or advertising SDK, no tracking and no third-party profiling. Your writing is never used to train any model.</p>
+  <p><strong>Nothing you write, and nothing that identifies you by name.</strong></p>
+  <p>There is no sign-up, no profile and no user ID. Cairn does not collect, transmit or store your thoughts, your searches, your questions, your location, your voice or your photos on any server. There is no advertising SDK, no tracking across apps or websites and no third-party profiling. The only data that leaves your iPhone is described under <a href="#diagnostics">Crash reports and usage counts</a>. Your writing is never used to train any model.</p>
   <h2>Where your thoughts live</h2>
   <p>On your iPhone, in Cairn's private storage, which other apps cannot read.</p>
   <p>Everything Cairn appears to "understand" about your writing — labels, moods, themes, connections, search — is computed <strong>on the device</strong>. Voice notes are transcribed on the device; Cairn requires on-device recognition, so the audio is never sent to Apple for transcription. Text in photos is read by Apple's Vision framework, also on the device.</p>
   <p><strong>Apple Intelligence.</strong> On an iPhone that has Apple Intelligence turned on, Cairn uses Apple's on-device language model to name themes, fill in a mood the word list could not decide, and word short summaries. This runs on your iPhone. Cairn does not use Private Cloud Compute or any server model. Thoughts that Cairn keeps quiet about (see <em>Sensitive writing</em>) are never given to it.</p>
   <h2>When Cairn does use the internet</h2>
-  <p>For exactly these four things. None of them send your thoughts.</p>
+  <p>For exactly these six things. None of them send your thoughts.</p>
   <p><strong>1. iCloud backup — only if you turn it on.</strong> Backups are encrypted on your iPhone and written to Cairn's own folder in your iCloud Drive. The backup is your data in your Apple Account; the developer has no access to it and no copy of it. Turn backup off, or delete the backup from iCloud, at any time.</p>
   <p><strong>2. Downloading Cairn's on-device search model.</strong> The model that lets search understand meaning is downloaded once after install, to keep the app smaller. It is fetched from a public GitHub releases page. Nothing about you or your writing is sent. As with downloading any file, the server can see your IP address and the time of the request. Cairn sends no identifier with it.</p>
   <p><strong>3. Opening a map link you shared.</strong> If you share a short map link into Cairn (for example a <code>maps.app.goo.gl</code> link), Cairn follows that link's redirects to work out which place it points to. That request goes to the map service the link belongs to and contains only the link you shared — nothing you wrote.</p>
   <p><strong>4. Purchases.</strong> Buying Cairn+ is handled entirely by Apple through the App Store. Cairn never sees your payment details.</p>
+  <p id="diagnostics"><strong>5. Crash reports and usage counts.</strong> Cairn uses Google's <strong>Firebase Crashlytics</strong> and <strong>Firebase Analytics</strong> so the developer can see when the app crashes and which features get used. A crash report contains the technical state of the app when it failed (device model, iOS version, app version, the code that crashed). Usage events contain only the name of a feature and small counts or flags — for example "a thought was saved" or "search was used". They never contain the text of a thought, a search, a tag, a place, a voice note or a photo. Firebase assigns a random installation ID to group these reports; it is not your name, email or Apple Account, Cairn does not use Apple's advertising identifier, and nothing is used for advertising or shared with data brokers. Google processes this data under the <a href="https://firebase.google.com/support/privacy">Firebase privacy terms</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. Deleting the app stops all reporting.</p>
+  <p><strong>6. Checking for required updates.</strong> At launch, Cairn reads a small setting from Google's <strong>Firebase Remote Config</strong> that says which app version is the oldest still supported, so it can ask you to update if a serious bug has been fixed. Nothing you wrote is sent; as with any request, the server sees your IP address and the time.</p>
   <h2>iPhone search — off by default</h2>
   <p>Cairn can make your thoughts findable from Spotlight, your iPhone's own search. <strong>This is off unless you turn it on</strong> in <em>Search and privacy</em>, and you can turn it off whenever you want.</p>
   <p>While it is on, the text and date of your thoughts are placed in the iPhone's Spotlight index. That index stays on your iPhone and is not sent anywhere — but it sits outside Cairn's private storage and answers before Cairn is opened.</p>
@@ -94,12 +96,12 @@
   <p>Photos are chosen with the system picker, which gives Cairn only the photo you pick — Cairn has no access to your library. Denying any permission leaves the rest of Cairn working.</p>
   <h2>Your control over your data</h2>
   <ul><li><strong>Export everything</strong>, any time, as an encrypted file you keep — free, forever.</li><li><strong>Delete anything</strong>, or delete the app. Deleting the app removes your thoughts from the iPhone. If you use iCloud backup, delete the backup from iCloud as well.</li><li><strong>No lock-in.</strong> Everything you wrote stays readable, searchable and exportable whether or not you ever buy Cairn+.</li></ul>
-  <p>Because Cairn has no account and no server, there is no database anywhere for the developer to delete on your behalf — and nothing to leak.</p>
+  <p>Because Cairn has no account and no server, there is no database of your writing anywhere for the developer to delete on your behalf — and nothing to leak. Crash reports and usage counts are anonymous and expire automatically under Firebase's retention settings; to ask for them to be deleted, email the developer from the Support page.</p>
   <h2>Sensitive writing</h2>
   <p>People write hard things in a private journal. Cairn is designed for that.</p>
   <p>Cairn checks your writing against a list of crisis-related phrases <strong>entirely on your iPhone</strong> so that it can stay <em>quiet</em> about those thoughts — it will not bring them back unasked, quote them in summaries, give them to Apple Intelligence, or put them in Spotlight. Nothing is shown to you, nothing is recorded about it, nothing is sent anywhere, and no diagnosis of any kind is made. It never hides anything from you: your own search and export always show everything you wrote.</p>
   <h2>Children</h2>
-  <p>Cairn is not directed at children under 13 and does not knowingly collect information from them. Since Cairn collects no personal information from anyone, there is nothing collected from a child either.</p>
+  <p>Cairn is not directed at children under 13 and does not knowingly collect information from them. Cairn collects no personal information such as names, email addresses or anything written in the app, from anyone.</p>
   <h2>Changes to this policy</h2>
   <p>If Cairn ever starts collecting anything, this policy will say so <strong>before</strong> that version ships, and the App Store privacy label will change in the same release.</p>
   <h2>Contact</h2>
